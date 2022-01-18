@@ -1,0 +1,292 @@
+/*Colores
+#8B8073 mas oscuro
+#CCC4B7
+#C8BDB1
+#B5AB9F
+#E7E2D7 mas claro
+*/
+
+
+@mixin tamanio ($alto, $ancho) {
+    height: $alto;
+    width: $ancho;
+}
+html{
+    margin: 0;
+}
+body{
+    font-family: 'Rye', cursive;
+    margin: 0;
+    padding:0;
+    background-color: #D9D0C3;
+}
+
+/*Nav*/
+header{
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+.header{
+    display: grid;
+    grid-template-areas: 'logo menu botones'
+                        'logo menu buscador';
+    grid-template-columns: 2fr 7fr 2fr;
+    background-color: #E7E2D7;
+}
+.logo{
+    @include tamanio(12rem, 12rem);
+    grid-area: logo;
+}
+.menu{
+    padding-top: 1rem;
+}
+
+.botones{
+    grid-area: botones;
+    text-align-last: end;
+}
+.Buscador{
+    grid-area: buscador;
+    padding-top: 1.8rem;
+}
+.buscador{
+    display: flex;
+}
+.nav-link{
+    color: black;
+}
+
+
+/*Main*/
+.section1{
+    display: flex;
+}
+.section1__imagen{
+    @include tamanio(40rem,40rem);
+}
+.galeria{
+    margin-left: 20rem;
+    display: grid;
+    grid-template-rows: 500px 100px;
+    grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr;
+    align-items: center;
+    justify-items: center;
+}
+  
+div#carousel {
+    grid-row: 1 / 2;
+    grid-column: 1 / 8;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    perspective: 600px;
+    --items: 5;
+    --middle: 3;
+    --position: 1;
+    pointer-events: none;
+}
+  
+div.item {
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    background-color: coral;
+    --r: calc(var(--position) - var(--offset));
+    --abs: max(calc(var(--r) * -1), var(--r));
+    transition: all 0.25s linear;
+    transform: rotateY(calc(-10deg * var(--r)))
+    translateX(calc(-300px * var(--r)));
+    z-index: calc((var(--position) - var(--abs)));
+}
+img{
+    @include tamanio(100%, 100%)
+}
+
+div.item:nth-of-type(1) {
+    --offset: 1;
+}
+div.item:nth-of-type(2) {
+    --offset: 2;
+}
+div.item:nth-of-type(3) {
+    --offset: 3;
+}
+div.item:nth-of-type(4) {
+    --offset: 4;
+}
+div.item:nth-of-type(5) {
+    --offset: 5;
+}
+
+input:nth-of-type(1) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+input:nth-of-type(1):checked ~ div#carousel {
+    --position: 1;
+}
+
+input:nth-of-type(2) {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
+input:nth-of-type(2):checked ~ div#carousel {
+    --position: 2;
+}
+
+input:nth-of-type(3) {
+    grid-column: 4 /5;
+    grid-row: 2 / 3;
+}
+input:nth-of-type(3):checked ~ div#carousel {
+    --position: 3;
+}
+
+input:nth-of-type(4) {
+    grid-column: 5 / 6;
+    grid-row: 2 / 3;
+}
+input:nth-of-type(4):checked ~ div#carousel {
+    --position: 4;
+}
+
+input:nth-of-type(5) {
+    grid-column: 6 / 7;
+    grid-row: 2 / 3;
+}
+input:nth-of-type(5):checked ~ div#carousel {
+    --position: 5;
+}
+
+.buscador__boton{
+    color: black;
+    border-color: black;
+}
+
+.carrito{
+    @include tamanio(5rem, 5rem);
+    position: fixed;
+    right: 1rem;
+    top: 38rem;
+    z-index: 99;
+    background-color: transparent;
+    border-color: black;
+}
+
+.Banderas{
+    align-items: stretch;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 18% 18% 18% 18% 18%;
+}
+.Banderas__Argentina{
+    width: 100%;
+    height: 100%;
+}
+.Banderas__Argentina:hover{
+    -webkit-transform:scale(1.25);
+    -moz-transform:scale(1.25);
+    -ms-transform:scale(1.25);
+    -o-transform:scale(1.25);
+    transform:scale(1.25);
+}
+.Banderas__Espania{
+    @include tamanio(100%, 100%)
+}
+.Banderas__Espania:hover{
+    -webkit-transform:scale(1.25);
+    -moz-transform:scale(1.25);
+    -ms-transform:scale(1.25);
+    -o-transform:scale(1.25);
+    transform:scale(1.25);
+}
+.Banderas__Colombia{
+    @include tamanio(100%, 100%)
+}
+.Banderas__Colombia:hover{
+    -webkit-transform:scale(1.25);
+    -moz-transform:scale(1.25);
+    -ms-transform:scale(1.25);
+    -o-transform:scale(1.25);
+    transform:scale(1.25);
+}
+.Banderas__Chile{
+    @include tamanio(100%, 100%)
+}
+.Banderas__Chile:hover{
+    -webkit-transform:scale(1.25);
+    -moz-transform:scale(1.25);
+    -ms-transform:scale(1.25);
+    -o-transform:scale(1.25);
+    transform:scale(1.25);
+}
+.Banderas__Mexico{
+    @include tamanio(100%, 100%)
+}
+.Banderas__Mexico:hover{
+    -webkit-transform:scale(1.25);
+    -moz-transform:scale(1.25);
+    -ms-transform:scale(1.25);
+    -o-transform:scale(1.25);
+    transform:scale(1.25);
+}
+
+.card{
+  width: 10rem;
+  height: 20rem;
+}
+.card::after {
+  content:'';
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-image: linear-gradient(to right top, #636363, #a2ab58) ;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  filter: blur(10px);
+}
+.section3{
+    display: grid;
+    grid-template-columns: 6fr 6fr;
+    background-color: #CCC4B7;
+}
+.section3__caliban{
+    text-align-last: center;
+}
+.caliban{
+    @include tamanio(25rem, 20rem);
+    width: 20rem;
+    padding-bottom: 5rem;
+}
+.section3__texto{
+    width: 30rem;
+}
+.section3__p{
+    padding-top: 2rem;
+    font-size: 1.5rem;
+    font-family: emoji;
+}
+
+strong{
+    color: black;
+}
+footer{
+    grid-area: footer;
+    background-color:#8B8073; 
+}
+a{
+    text-decoration: none;
+    color: #CCC4B7;
+}
+.Menu_Footer{
+    text-align: center;
+    align-self: center;
+}
+.Redes_Footer{
+    align-items: center;
+    justify-content: center;
+}

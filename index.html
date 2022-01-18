@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./Bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./Css/style.css">
+    <title>Inicio</title>
+</head>
+<body>
+    <header>
+        <nav class="header">
+            <div class="logo">
+                <img src="./Media/Mercado libro (1).png" class="logo" alt="Logo Mercado Libro">
+            </div>
+            <div class="botones container">
+                <a href="./Paginas/loginvista.html"><button type="button" id="iniciarSesion" class="btn btn-light">Iniciar Sesión</button></a>
+            <a href="./Paginas/registrarvista.html"><button type="button" id="registrarse" class="btn btn-dark">Registrarse</button></a> 
+            </div>
+                <div class="menu" id="navbarSupportedContent">
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item">
+                            <a class="nav-link active" href="./index.html">Incio</a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link" href="./Paginas/LibrosNuevos.html">Nuevos</a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link" href="./Paginas/LibrosLeídos.html">Leídos</a>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link" href="./Paginas/Foro.html">Foro</a>
+                            </li>
+                        </ul>
+                <div class="Buscador"> 
+                    <form class="form-inline my-2 my-lg-0 buscador">
+                        <input class="form-control mr-sm-2" type="search" placeholder="¿Qué libro estabas buscando?" aria-label="Search">
+                        <button class="buscador__boton btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+                    </form>
+                </div>
+            </div>
+            <div>
+                <button type="button" class="carrito rounded-circle btn btn-primary">
+                    <img src="./Media/biblioteca.png" class="rounded-circle" alt="">
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    <span class="visually-hidden">unread messages</span>
+                    </span>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        
+        <section class="section1 container-fluid">
+            <img class="col-6 section1__imagen" src="./Media/mujer leyendo conocimiento.png" alt="">
+            <div class="galeria carousel col-6">
+                <input type="radio" name="position" />
+                <input type="radio" name="position" />
+                <input type="radio" name="position" checked/>
+                <input type="radio" name="position" />
+                <input type="radio" name="position" />
+                <div id="carousel">
+                    <div class="item"><img src="./Media/it.jpg" alt=""></div>
+                    <div class="item"><img src="./Media/Crimen y castigo.jpg" alt=""></div>
+                    <div class="item"><img src="./Media/1984.jpg" alt=""></div>
+                    <div class="item"><img src="./Media/cronicasmarcianas.jpg" alt=""></div>
+                    <div class="item"><img src="./Media/elAmorEnLosTiemposDelColera.jpg" alt=""></div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+        <section class=" section2 Banderas">
+            <a href="#Argentina"><img class="Banderas__Argentina" src="./Media/aventura.jpg" alt="Argentina" height="470px" ></a>
+            <a href="#Espania"><img class="Banderas__Espania" src="./Media/biografia.jpg" alt="España" height="470px" width="300px" ></a>
+            <a href="#Mexico"><img class="Banderas__Mexico" src="./Media/terror.jpg" alt="Mexico" height="470px"width="300px"></a>
+            <a href="#Colombia"><img class="Banderas__Colombia" src="./Media/policial.jpg" alt="Colombia" height="470px"width="300px" ></a>
+            <a href="#Chile"><img class="Banderas__Chile" src="./Media/romance.jpg" alt="Chile" height="470px"width="300px"></a>
+        </section>
+        <section class="section3">
+            <div class="section3__texto container">
+                <h2>¿Que es Mercado Libro?</h2>
+                <p class="section3__p">Se trata de una comunidad de compra, venta o intercambio de libros, formada tanto por editoriales como por los lectores. Puedes publicar tus libros mandando un mensaje a <a href="https://www.instagram.com/_mercadolibro" target="_blank"><strong>instagram</strong></a> y nosotros publicaremos en todas las redes sociales y en esta página tu libro ¡Bienvenido!</p>
+            </div>
+            <div class="section3__caliban">
+                <h3>Visita nuestra revista cultural</h3>
+                <a href="https://elcaliban.blogspot.com/" target="_blank"><img src="./Media/caliban.jpeg" class="caliban" alt=""></a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <nav class="row">
+                    <!--Logo de Footer-->
+                    <div class="col-4">
+                        <a href="./index.html" class="align-items-center"><img src="./Media/Mercado libro (1).png"  alt="Logo de Mercado Libro" class="logo mr-2"></a>
+                    </div>
+                    <!--Menu del Footer-->
+                    <ul class="col-4 list-unstyled Menu_Footer">
+                        <li class="text-uppercase">Menú</li>
+                        <li class="text-reset"><a href="./index.html">Inicio</a></li>
+                        <li class="text-reset"><a href="./Paginas/LibrosNuevos.html">Libros Nuevos</a></li>
+                        <li class="text-reset"><a href="./Paginas/LibrosLeídos.html">Libros Leídos</a></li>
+                        <li class="text-reset"><a href="./Paginas/Foro.html">Foro</a></li>
+                    </ul>
+                    <!--Redes-->
+                    <div class="col-4 d-flex Redes_Footer">
+                        <a href="https://www.twitter.com/redbullbatalla/" target="_blank">
+                            <img src="../Media/Twitter.png" alt="Twitter"></a> 
+                        <a href="https://www.instagram.com/redbullbatalla/" target="_blank">
+                            <img  src="../Media/instagram.png" alt="instagram"></a>
+                        <a href="https://www.youtube.com/redbullbatalla/" target="_blank">
+                            <img src="../Media/youtube.png" alt="youtube"></a>
+                    </div>
+            </nav>
+        </div>
+    </footer>
+    <script src="./js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
