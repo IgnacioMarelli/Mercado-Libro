@@ -13,71 +13,71 @@
 </head>
 <body>
     <header>
-        <nav class="header">
-            <div class="logo">
-                <img src="./Media/Mercado libro (1).png" class="logo" alt="Logo Mercado Libro">
+    <nav class="header">
+        <!---LOGO-->
+        <div class="logo">
+            <img src="./Media/Mercado libro (1).png" class="logo" alt="Logo Mercado Libro">
+        </div>
+        <!---USUARIO-->
+        <div class="botones">
+            <input type="checkbox" class="Menu_label" id="menu_input">
+            <label for="menu_input" class="Menu_label"><img  class="imagenUsuario" src="./Media/usuario-de-perfil.png" alt=""></label>
+            <ul class="Lista_Menu" role="lista">
+                <a href="./Paginas/loginvista.html"><li class="rounded" role="item de la lista">Inciar sesión</a></li>
+                <a href="./Paginas/registrarvista.html"><li class="rounded" role="item de la lista">Registrate</a></li>
+            </ul>
+        </div>
+        <!---MENU-->
+        <div class="menu" id="navbarSupportedContent">
+                <input type="checkbox" class="Menu_label" id="menu-barra-input">
+                <label for="menu-barra-input" id="menu-hamburguesa" class="Menu_label"><img src="./Media/mostrar.png" id="menu-celular" alt=""></label>
+                <ul class="nav nav-tabs menu-barra">
+                    <li class="nav-item">
+                    <a class="nav-link active" href="./index.html">Incio</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="./Paginas/Tienda.html">Tienda</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="./Paginas/LibrosLeídos.html">Leídos</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="./Paginas/Foro.html">Foro</a>
+                    </li>
+                </ul>
+        </div>
+            <!---BUSCADOR-->
+        <div class="Buscador"> 
+            <form class="form-inline my-2 my-lg-0 buscador">
+                <input class="form-control mr-sm-2" type="search" placeholder="¿Qué libro estabas buscando?" aria-label="Search">
+                <button class="buscador__boton btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+            </form>
+        </div>
+        <!---CARRITO-->
+        <div class="divCarrito">
+            <button type="button" class="carrito rounded-circle btn btn-primary">
+                <img src="./Media/biblioteca.png" class="rounded-circle" alt="">
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                <span id="contador"></span>
+                  0
+                </span>
+              </button>
+            <div class="productosCarrito">
             </div>
-            <div class="botones container">
-                <a href="./Paginas/loginvista.html"><button type="button" id="iniciarSesion" class="btn btn-light">Iniciar Sesión</button></a>
-            <a href="./Paginas/registrarvista.html"><button type="button" id="registrarse" class="btn btn-dark">Registrarse</button></a> 
-            </div>
-                <div class="menu" id="navbarSupportedContent">
-                        <ul class="nav nav-tabs">
-                            <li class="nav-item">
-                            <a class="nav-link active" href="./index.html">Incio</a>
-                            </li>
-                            <li class="nav-item">
-                            <a class="nav-link" href="./Paginas/LibrosNuevos.html">Nuevos</a>
-                            </li>
-                            <li class="nav-item">
-                            <a class="nav-link" href="./Paginas/LibrosLeídos.html">Leídos</a>
-                            </li>
-                            <li class="nav-item">
-                            <a class="nav-link" href="./Paginas/Foro.html">Foro</a>
-                            </li>
-                        </ul>
-                <div class="Buscador"> 
-                    <form class="form-inline my-2 my-lg-0 buscador">
-                        <input class="form-control mr-sm-2" type="search" placeholder="¿Qué libro estabas buscando?" aria-label="Search">
-                        <button class="buscador__boton btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-                    </form>
-                </div>
-            </div>
-            <div>
-                <button type="button" class="carrito rounded-circle btn btn-primary">
-                    <img src="./Media/biblioteca.png" class="rounded-circle" alt="">
-                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                    <span class="visually-hidden">unread messages</span>
-                    </span>
-                </button>
-            </div>
-        </nav>
-    </header>
+        </div>
+    </nav>
+</header>
+    <!---Main-->
     <main>
-        
-        <section class="section1 container-fluid">
+        <section class="section1">
             <img class="col-6 section1__imagen" src="./Media/mujer leyendo conocimiento.png" alt="">
-            <div class="galeria carousel col-6">
-                <input type="radio" name="position" />
-                <input type="radio" name="position" />
-                <input type="radio" name="position" checked/>
-                <input type="radio" name="position" />
-                <input type="radio" name="position" />
-                <div id="carousel">
-                    <div class="item"><img src="./Media/it.jpg" alt=""></div>
-                    <div class="item"><img src="./Media/Crimen y castigo.jpg" alt=""></div>
-                    <div class="item"><img src="./Media/1984.jpg" alt=""></div>
-                    <div class="item"><img src="./Media/cronicasmarcianas.jpg" alt=""></div>
-                    <div class="item"><img src="./Media/elAmorEnLosTiemposDelColera.jpg" alt=""></div>
+            <div class="col-6">
+                <div class="listaDeseos">
+                    <h1 class="listaDeseos listaDeseos-texto">Arma tu lista de deseos:</h1>
+                    <input type="text" class="listaDeseos listaDeseos-input" name="deseos" placeholder="Escribi el libro que te gustaría tener">
+                    <button id="agregar" class="listaDeseos">Agregar</button>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+                <div id="libros"></div>
             </div>
         </section>
         <section class=" section2 Banderas">
@@ -103,7 +103,7 @@
             <nav class="row">
                     <!--Logo de Footer-->
                     <div class="col-4">
-                        <a href="./index.html" class="align-items-center"><img src="./Media/Mercado libro (1).png"  alt="Logo de Mercado Libro" class="logo mr-2"></a>
+                        <a href="./index.html" class="align-items-center"><img src="./Media/Mercado libro (1).png"  alt="Logo de Mercado Libro" class="logo-footer mr-2"></a>
                     </div>
                     <!--Menu del Footer-->
                     <ul class="col-4 list-unstyled Menu_Footer">

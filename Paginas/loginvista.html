@@ -1,37 +1,60 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<meta charset="UTF-8">
-	<title></title> 
-	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" >
-	<link rel="stylesheet" href="../Css/estilos.css">
-	
-
-</head>  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../Css/style.css">
+    <title>Inicio</title>
+</head>
 <body>
-    <form class="formulario">
-    
-    <h1>Login</h1>
-     <div class="contenedor">
-     
-     
-         
-         <div class="input-contenedor">
-         <i class="fas fa-envelope icon"></i>
-         <input type="text" placeholder="Correo Electronico">
-         
-         </div>
-         
-         <div class="input-contenedor">
-        <i class="fas fa-key icon"></i>
-         <input type="password" placeholder="Contraseña">
-         
-         </div>
-         <input type="submit" value="Login" class="button">
-         <p>Al registrarte, aceptas nuestras Condiciones de uso y Política de privacidad.</p>
-         <p>¿No tienes una cuenta? <a class="link" href="registrarvista.html">Registrate </a></p>
-     </div>
+    <form>
+        <div class="form-group">
+          <label for="correo">Correo electrónico</label>
+          <input type="email" class="form-control" id="correo" aria-describedby="emailHelp" placeholder="Ingrese Correo">
+        </div>
+        <div class="form-group">
+          <label for="contraseña">Password</label>
+          <input type="password" class="form-control" id="contraseña" placeholder="Password">
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="recordarDatos">
+          <label class="form-check-label" for="recordarDatos">Recordar mis datos</label>
+        </div>
+        <button type="submit" class="btn  btn-primary" id="btnLogin">Iniciar Sesión</button>
+      </form>
     </form>
+    <footer>
+        <div class="container">
+            <nav class="row">
+                    <!--Logo de Footer-->
+                    <div class="col-4">
+                        <a href="../index.html" class="align-items-center"><img src="../Media/Mercado libro (1).png"  alt="Logo de Mercado Libro" class="logo mr-2"></a>
+                    </div>
+                    <!--Menu del Footer-->
+                    <ul class="col-4 list-unstyled Menu_Footer">
+                        <li class="text-uppercase">Menú</li>
+                        <li class="text-reset"><a href="../index.html">Inicio</a></li>
+                        <li class="text-reset"><a href="./Tienda.html">Tienda</a></li>
+                        <li class="text-reset"><a href="./LibrosLeídos.html">Libros Leídos</a></li>
+                        <li class="text-reset"><a href="./Foro.html">Foro</a></li>
+                    </ul>
+                    <!--Redes-->
+                    <div class="col-4 d-flex Redes_Footer">
+                        <a href="https://www.twitter.com/redbullbatalla/" target="_blank">
+                            <img src="../Media/Twitter.png" alt="Twitter"></a> 
+                        <a href="https://www.instagram.com/redbullbatalla/" target="_blank">
+                            <img  src="../Media/instagram.png" alt="instagram"></a>
+                        <a href="https://www.youtube.com/redbullbatalla/" target="_blank">
+                            <img src="../Media/youtube.png" alt="youtube"></a>
+                    </div>
+            </nav>
+        </div>
+    </footer>
+    <script src="../js/scripts.js"></script>
 </body>
 </html>

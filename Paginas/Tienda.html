@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../Css/style.css">
+    <title>Tienda</title>
+</head>
+<body>
+    <nav class="header">
+        <div class="logo">
+            <img src="../Media/Mercado libro (1).png" class="logo" alt="Logo Mercado Libro">
+        </div>
+        <div class="botones container">
+            <a href=".loginvista.html"><button type="button" id="iniciarSesion" class="btn btn-light">Iniciar Sesión</button></a>
+           <a href=".registrarvista.html"><button type="button" id="registrarse" class="btn btn-dark">Registrarse</button></a> 
+        </div>
+            <div class="menu" id="navbarSupportedContent">
+                    <input type="checkbox" class="Menu_label" id="menu_input">
+                    <label for="menu_input" class="Menu_label"><img src="./Media/mostrar.png" id="menu-celular" alt=""></label>
+                    <ul class="nav nav-tabs menu-barra">
+                        <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Incio</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link active" href="./Tienda.html">Tienda</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="./LibrosLeídos.html">Leídos</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="./Foro.html">Foro</a>
+                        </li>
+                    </ul>
+            <div class="Buscador"> 
+                <form class="form-inline my-2 my-lg-0 buscador">
+                    <input class="form-control mr-sm-2" type="search" placeholder="¿Qué libro estabas buscando?" aria-label="Search">
+                    <button class="buscador__boton btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+        <!---CARRITO-->
+        <div class="divCarrito">
+            <button type="button" class="carrito rounded-circle btn btn-primary">
+                <img src="../Media/biblioteca.png" class="rounded-circle" alt="">
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                <span id="contador"></span>
+                </span>
+            </button>
+            <div class="productosCarrito">
+            </div>
+        </div>
+    </nav>
+            <!-- Section-->
+        <section class="py-5 section2">
+            <div class="container px-4 px-lg-5 mt-5">
+                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top imagenListada" src="../Media/1984.jpg" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder nombreLibro">1984</h5>
+                                    <!-- Product price-->
+                                    <span>$</span><span class="precio">950</span>
+                                    <span class="condicion">Nuevo</span>
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <button class="añadir">Añadir al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Sale badge-->
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                            <!-- Product image-->
+                            <img class="card-img-top imagenListada" src="../Media/circunstancias.jpeg" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder nombreLibro">Los que aman, odian</h5>
+                                    <!-- Product reviews-->
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    <span class="text-muted text-decoration-line-through">$2000</span>
+                                    <span>$</span><span class="precio">1050</span>
+                                    <span class="condicion">Leído</span>
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                               <button class="añadir Losqueamanodian">Añadir al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Sale badge-->
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                            <!-- Product image-->
+                            <img class="card-img-top imagenListada" src="../Media/Crimen y castigo.jpg" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder nombreLibro">Crimen y Castigo</h5>
+                                    <!-- Product price-->
+                                    <span class="text-muted text-decoration-line-through">$1000</span>
+                                    <span>$</span><span class="precio">550</span>
+                                    <span class="condicion">Nuevo</span>
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <button class="añadir">Añadir al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top imagenListada" src="../Media/elAmorEnLosTiemposDelColera.jpg" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder nombreLibro">El amor en los tiempos del colera</h5>
+                                    <!-- Product reviews-->
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    <span>$</span><span class="precio">700</span>
+                                    <span class="condicion">Leído</span>
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <button class="añadir">Añadir al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+        </section>
+
+    <footer>
+        <div class="container">
+            <nav class="row">
+                    <!--Logo de Footer-->
+                    <div class="col-4">
+                        <a href="../index.html" class="align-items-center"><img src="../Media/Mercado libro (1).png"  alt="Logo de Mercado Libro" class="logo mr-2"></a>
+                    </div>
+                    <!--Menu del Footer-->
+                    <ul class="col-4 list-unstyled Menu_Footer">
+                        <li class="text-uppercase">Menú</li>
+                        <li class="text-reset"><a href="../index.html">Inicio</a></li>
+                        <li class="text-reset"><a href="./Tienda.html">Tienda</a></li>
+                        <li class="text-reset"><a href="./LibrosLeídos.html">Libros Leídos</a></li>
+                        <li class="text-reset"><a href="./Foro.html">Foro</a></li>
+                    </ul>
+                    <!--Redes-->
+                    <div class="col-4 d-flex Redes_Footer">
+                        <a href="https://www.twitter.com/redbullbatalla/" target="_blank">
+                            <img src="../Media/Twitter.png" alt="Twitter"></a> 
+                        <a href="https://www.instagram.com/redbullbatalla/" target="_blank">
+                            <img  src="../Media/instagram.png" alt="instagram"></a>
+                        <a href="https://www.youtube.com/redbullbatalla/" target="_blank">
+                            <img src="../Media/youtube.png" alt="youtube"></a>
+                    </div>
+            </nav>
+        </div>
+    </footer>
+    <script src="../js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

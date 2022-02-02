@@ -1,86 +1,8 @@
-/*function mostrar(mensaje) {
-    alert(mensaje);
-}
-function multiplicar(a,b) {
-    return a*b;
-}
-
-class Libro{
-    constructor(nombre, condicion, editorial, precio){
-        this.nombre = nombre;
-        this.condicion= condicion;
-        this.editorial=editorial;
-        this.precio=precio;
-        this.vendido=false;
-    }
-    calcularPrecioVenta(){
-        let precioVenta = this.precio*1.21;
-        return precioVenta;
-    }
-
-    mostrarProducto(){
-        alert("Libro: "+this.nombre+"\n"+"Editorial: " +this.editorial+"\n" + "Condicion: " +this.condicion+"\n"+"Precio: " +this.precio);
-    }
-}
-
-let band = true;
-let nombreProducto;
-let editorialProducto;
-let condicionProducto;
-let precioProducto;
-
-function campoVacio(a,b) {
-    if (a == "" & b){ 
-        mostrar("Ingrese el dato correctamente");
-        return true;
-    }else{
-        return false;
-    }
-}
-
-while (band){
-    nombreProducto = prompt("Ingrese el título del libro");
-    campoVacio(nombreProducto,band);
-    band=false;
-}
-
-band=true;
-
-while (band){
-    editorialProducto = prompt("Ingrese la editorial del libro");
-    campoVacio(editorialProducto,band);
-    band=false
-}
-
-band=true;
-
-while (band){
-    condicionProducto = prompt("Ingrese la condicion del libro");
-    campoVacio(condicionProducto,band);
-    band=false
-}
-band=true;
-
-while (band){
-    precioProducto = Number(prompt("Ingrese el precio del libro"));
-    campoVacio(precioProducto,band);
-    band=false
-}
-
-//Instanciación de un nuevo objeto.
-let nuevoProducto= new Libro(nombreProducto,editorialProducto,condicionProducto,precioProducto);
-
-//Método para ver los datos del Libro.
-nuevoProducto. mostrarProducto();
-
+/*
 //Calcular precio final.
 let precioFinal = nuevoProducto.calcularPrecioVenta();
 mostrar("El precio de venta del producto es $"+ precioFinal);
 
-//CARRITO 
-const carrito = [];
-
-carrito.push(nuevoProducto);
 
 // Precio envio a domicilio (correo argentino)
 let cantidad = parseInt(prompt("¿cuantos libros desea llevar?"));
@@ -118,23 +40,135 @@ if(zona == 2 && ciudad == "LA PLATA"){
 }
 //Precio final con envio a domicilio
 mostrar("El precio del producto con el envio a domicilio es de $" + (precioFinal+precioDomicilio));
-
-//  Ordenador de productos
-
-const libros = [];
-libros.push(new Libro("1984", "nuevo", "lucemar", 550, false));
-libros.push(new Libro("it", "nuevo", "lucemar", 2500, false));
-libros.push(new Libro("el amor en los tiempos del colera", "nuevo", "lucemar", 950, true)); 
-
-libros.sort(function (a, b) {
-    if (a.precio > b.precio) {
-      return 1;
-    }
-    if (a.precio < b.precio) {
-      return -1;
-    }else{
-    return 0;
-    }
-  });
-console.log(libros);
 */
+
+
+let carrito=[];
+let i =1;
+const contador = document.querySelector('#contador');
+const btnAgregar = document.querySelectorAll(".añadir");
+let productos= document.querySelector(".productosCarrito");
+let divJava = document.querySelector(".divJava1");
+const salir = document.querySelectorAll(".salir");
+
+class Libro{
+    constructor(imagen,nombre, condicion, precio){
+        this.imagen = imagen;
+        this.nombre = nombre;
+        this.condicion= condicion;
+        this.precio=precio;
+    }
+}
+btnAgregar.forEach(btn => {
+    btn.addEventListener('click', crearLibro)
+  })
+function crearLibro(e){
+    const button = e.target;
+    const libro = button.closest('.card');
+    const imagen = libro.querySelector(".imagenListada").src;
+    const nombre = libro.querySelector(".nombreLibro").textContent;
+    const condicion = libro.querySelector(".condicion").textContent;
+    const precio = libro.querySelector(".precio").textContent;
+    const libroSeleccionado = new Libro(imagen,nombre,condicion,precio);
+    contador.innerHTML=i;
+    i++;
+    agregarCarrito(libroSeleccionado);
+}
+function agregarCarrito(libroSeleccionado) {
+    carrito.push(libroSeleccionado);
+    agregarLocalStorage();
+    contadorCarrito();
+}
+function contadorCarrito() {
+
+}
+function agregarLocalStorage(){
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+}
+/*
+function mostrarCarrito() {
+    carrito.addEventListener("mouseover", function (e) {
+        botonAgregar();
+        
+    });
+    function botonAgregar() {
+        btnAgregar.forEach(btnAgregar => {
+            btnAgregar.addEventListener("click", function (e){
+                const libro = e.currentTarget.classList;
+                if (libro.contains("milNueveOchentaYCuatro")) {
+                   let libroSeleccionado = milNueveOchentaYCuatro;
+                   return libroSeleccionado;
+                }
+                for (const contenido in libroSeleccionado) {
+                    let div = `<div class=divJava>${contenido}: ${libroSeleccionado[contenido]} </div>`;
+                    return div;
+                }
+            });
+        }); 
+    }
+}
+mostrarCarrito();
+
+/*
+
+btnAgregar.forEach(btnAgregar => {
+    btnAgregar.addEventListener("click", crearListado());
+});  
+function crearListado() {
+    let items = [];
+    for (const contenido in libroSeleccionado) {
+        let div = `<div class=divJava>${contenido}: ${libroSeleccionado[contenido]} </div>`;
+        items.push(div);
+    }
+    for (const item of items) {
+        productos.insertAdjacentHTML('beforeend', item);
+    }
+}
+
+carrito.addEventListener("mouseover", function () {
+    productos.innerHTML= `<div class= "divJava"> <h2 class="h2Java">Productos seleccionados</h2><button class="salir">X</button></div>`;
+    const salir = document.querySelector(".salir");
+    salir.addEventListener("click", function () {
+        this.parentNode.remove();
+    })
+});
+
+const shoppingCartDiv = document.createElement( 'div' );
+const cartModal =
+    ` 
+        <div class="row shoppingCartPlant mt-3 text-center">
+            <div class="col-3">
+                <img src=${plantImg} class="imagenesModal"/>
+                <h6 class="mt-2 shoppingCartPlantTitle">${plantTitle}</h6>
+            </div> 
+            <div class="col-3">
+                <p class="plant-price shoppingCartPlantPrice">${plantPrice}</p>
+            </div>
+            <div class="col-3">
+                <input class="text-center shoppingCartPlantQuantity inputCuenta" type="number" value="1">
+            </div>
+            <div class="col-3">
+                <button class="btn btn-danger" id="remove-plant-btn" data-name="${plantTitle}">
+                    x
+                </button>
+            </div>
+        </div>
+    `
+                        
+shoppingCartDiv.innerHTML = cartModal;
+showCart.append( shoppingCartDiv );
+
+//Contador Carrito
+
+
+let i =1;
+const contador = document.querySelector('#contador');
+const agregar = document.querySelectorAll('.añadir');
+
+
+agregar.forEach(boton => {
+    boton.addEventListener("click", function suma(){
+        contador.innerHTML=i;
+        i++;
+    });
+});  */
