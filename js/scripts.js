@@ -172,3 +172,14 @@ agregar.forEach(boton => {
         i++;
     });
 });  */
+
+// ${"menu"}.hover(function(){
+//     $(this).addClass("");
+// }, function(){
+//     $(this).removeClass("");
+// })
+// .slideUp() para que desaparezca
+
+// $("").change(()=>{
+//     console.log(this.value);
+// })
