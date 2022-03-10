@@ -19,34 +19,24 @@
             <img src="./Media/Mercado libro (1).png" class="logo" alt="Logo Mercado Libro">
         </div>
         <!---USUARIO-->
-        <div class="botones">
-            <input type="checkbox" class="Menu_label" id="menu_input">
-            <label for="menu_input" class="Menu_label"><img  class="imagenUsuario" src="./Media/usuario-de-perfil.png" alt=""></label>
-            <ul class="Lista_Menu" role="lista">
-                <a href="./Paginas/loginvista.html"><li class="rounded" role="item de la lista">Inciar sesión</a></li>
-                <a href="./Paginas/registrarvista.html"><li class="rounded" role="item de la lista">Registrate</a></li>
-            </ul>
+        <div class="botones container">
         </div>
         <!---MENU-->
         <div class="menu" id="navbarSupportedContent">
-                <input type="checkbox" class="Menu_label" id="menu-barra-input">
-                <label for="menu-barra-input" id="menu-hamburguesa" class="Menu_label"><img src="./Media/mostrar.png" id="menu-celular" alt=""></label>
-                <ul class="nav nav-tabs menu-barra">
-                    <li class="nav-item">
-                    <a class="nav-link active" href="./index.html">Incio</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="./Paginas/Tienda.html">Tienda</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="./Paginas/LibrosLeídos.html">Leídos</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="./Paginas/Foro.html">Foro</a>
-                    </li>
-                </ul>
+            <img src="./Media/mostrar.png" id="menu-celular" alt="">
+            <ul class="nav nav-tabs menu-barra">
+                <li class="nav-item">
+                <a class="nav-link active " href="./index.html">Incio</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link " href="./Paginas/Tienda.html">Tienda</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link carritoNoTienda" href="./Paginas/Carrito.html">Carrito</a>
+                </li>
+            </ul>
         </div>
-            <!---BUSCADOR-->
+        <!---BUSCADOR-->
         <div class="Buscador"> 
             <form class="form-inline my-2 my-lg-0 buscador">
                 <input class="form-control mr-sm-2" type="search" placeholder="¿Qué libro estabas buscando?" aria-label="Search">
@@ -56,35 +46,43 @@
         <!---CARRITO-->
         <div class="divCarrito">
             <button type="button" class="carrito rounded-circle btn btn-primary">
-                <img src="./Media/biblioteca.png" class="rounded-circle" alt="">
+                <img src="./Media/biblioteca.png" class="rounded-circle imgCarrito" alt="">
                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                <span id="contador"></span>
-                  0
+                <span id="contador">0</span>
                 </span>
               </button>
             <div class="productosCarrito">
+                <div id="carrito"></div>
             </div>
         </div>
     </nav>
 </header>
     <!---Main-->
     <main>
-        <section class="section1">
-            <img class="col-6 section1__imagen" src="./Media/mujer leyendo conocimiento.png" alt="">
-            <div class="col-6">
-                <div class="listaDeseos">
-                    <h1 class="listaDeseos listaDeseos-texto">Arma tu lista de deseos:</h1>
-                    <input type="text" class="listaDeseos listaDeseos-input" name="deseos" placeholder="Escribi el libro que te gustaría tener">
-                    <button id="agregar" class="listaDeseos">Agregar</button>
+        <section class="section1 container">
+            <div class="col-4 introduccion">
+            <img src="./Media/Mercado Libro.jpg" class="imagenMain col-4" alt=""> 
+            </div>
+            <div class="main2">
+                <img src="./Media/luces.png" class= "luces col-4" alt="">
+                <div class="parte2"> 
+                    <h2 class="textoMain">¡Bienvenido a la libreria comunitaria!</h2>
+                    <section title=".slideThree">
+                        <!-- .slideThree -->
+                        <div class="slideThree">  
+                        <input type="checkbox" id="slideThree" name="check">
+                        <label for="slideThree"></label>
+                        </div>
+                        <!-- end .slideThree -->
+                    </section>
                 </div>
-                <div id="libros"></div>
             </div>
         </section>
         <section class=" section2 Banderas">
             <a href="#Argentina"><img class="Banderas__Argentina" src="./Media/aventura.jpg" alt="Argentina" height="470px" ></a>
             <a href="#Espania"><img class="Banderas__Espania" src="./Media/biografia.jpg" alt="España" height="470px" width="300px" ></a>
             <a href="#Mexico"><img class="Banderas__Mexico" src="./Media/terror.jpg" alt="Mexico" height="470px"width="300px"></a>
-            <a href="#Colombia"><img class="Banderas__Colombia" src="./Media/policial.jpg" alt="Colombia" height="470px"width="300px" ></a>
+            <a href="#Colombia"><img class="policial" src="./Media/policial.jpg" alt="Colombia" height="470px"width="300px" ></a>
             <a href="#Chile"><img class="Banderas__Chile" src="./Media/romance.jpg" alt="Chile" height="470px"width="300px"></a>
         </section>
         <section class="section3">
@@ -103,15 +101,14 @@
             <nav class="row">
                     <!--Logo de Footer-->
                     <div class="col-4">
-                        <a href="./index.html" class="align-items-center"><img src="./Media/Mercado libro (1).png"  alt="Logo de Mercado Libro" class="logo-footer mr-2"></a>
+                        <a href="./index.html" class="align-items-center"><img src="./Media/Mercado libro (1).png"  alt="Logo de Mercado Libro" class="logo mr-2"></a>
                     </div>
                     <!--Menu del Footer-->
                     <ul class="col-4 list-unstyled Menu_Footer">
                         <li class="text-uppercase">Menú</li>
                         <li class="text-reset"><a href="./index.html">Inicio</a></li>
                         <li class="text-reset"><a href="./Paginas/LibrosNuevos.html">Libros Nuevos</a></li>
-                        <li class="text-reset"><a href="./Paginas/LibrosLeídos.html">Libros Leídos</a></li>
-                        <li class="text-reset"><a href="./Paginas/Foro.html">Foro</a></li>
+                        <li class="text-reset"><a href="./Paginas/Carrito.html">Carrito</a></li>
                     </ul>
                     <!--Redes-->
                     <div class="col-4 d-flex Redes_Footer">
@@ -127,6 +124,6 @@
     </footer>
     <script src="./js/jquery-3.6.0.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="./js/scripts.js"></script>
+    <script src="./js/scriptInicio.js"></script>
 </body>
 </html>

@@ -28,10 +28,13 @@ header {
 
 .header {
   display: grid;
-  grid-template-areas: 'logo menu botones' 'logo buscador boton';
+  grid-template-areas: 'logo menu botones' 'logo buscador botones';
   grid-template-columns: 2fr 7fr 2fr;
   background-color: #E7E2D7;
   height: 9rem; }
+
+.nocturno1 {
+  background-color: #BFBFBF; }
 
 .logo {
   height: 9rem;
@@ -96,13 +99,37 @@ label {
   align-self: center;
   justify-self: center; }
 
+/*Pagar*/
+.mainPagar {
+  margin-top: 10rem; }
+
 /*Main*/
 .section1 {
-  display: flex; }
+  display: flex;
+  background-color: #dbd7c4;
+  margin-top: 10px;
+  margin-bottom: 5rem;
+  box-shadow: 0rem 2rem 1rem 1rem rgba(0, 0, 0, 0.5); }
 
 .section1__imagen {
-  height: 40rem;
-  width: 40rem; }
+  width: 17rem;
+  height: 7rem;
+  margin-top: 12rem; }
+
+.luces {
+  width: 15rem;
+  height: 10rem; }
+
+.main2 {
+  display: flex; }
+
+.imagenMain {
+  height: 20rem;
+  width: 20rem;
+  margin-left: 15rem; }
+
+.nocturno2 {
+  background-color: #88898C; }
 
 .galeria {
   margin-left: 20rem;
@@ -112,7 +139,25 @@ label {
   align-items: center;
   justify-items: center; }
 
-img {
+.imgCarrito {
+  height: 100%;
+  width: 100%; }
+
+.divBtnComprar {
+  display: flex;
+  align-self: flex-end;
+  padding-bottom: 3rem; }
+
+.comprarBTN {
+  margin-left: 7rem; }
+
+.envioCarrito {
+  font-size: smaller; }
+
+.envio {
+  display: flex; }
+
+.imagenLibroSeleccionado {
   height: 100%;
   width: 100%; }
 
@@ -123,7 +168,7 @@ img {
 .divCarrito {
   position: fixed;
   right: 1rem;
-  top: 43rem;
+  top: 39rem;
   z-index: 99; }
 
 .carrito {
@@ -133,14 +178,57 @@ img {
   border-color: black; }
 
 .productosCarrito {
-  background-color: black;
+  background-color: #B5AB9F;
+  display: none;
   position: absolute;
-  bottom: 8rem;
-  right: 2rem; }
+  width: 40rem;
+  height: 30rem;
+  bottom: 5rem;
+  right: 1rem;
+  overflow: overlay; }
+
+.divBtnComprar {
+  display: none; }
+
+#separador {
+  margin-top: 2rem;
+  margin-bottom: 2rem; }
 
 .divJava {
-  background-color: gray;
-  display: flex; }
+  background-color: #B5AB9F;
+  display: flex;
+  width: 35rem;
+  height: 12rem;
+  color: #000; }
+
+hr {
+  color: black; }
+
+.lugarCiudad {
+  display: none; }
+
+#cantidadLibros {
+  width: 2rem; }
+
+.precios {
+  grid-template-areas: 'precioFinal    pagarBitCoins' 'precioCEnvio   pagarBitCoins'; }
+
+.precioFinal {
+  background-color: white;
+  grid-area: precioFinal; }
+
+#precioCEnvio {
+  background-color: white;
+  grid-area: precioCEnvio; }
+
+.mainPagar {
+  grid-area: pagarBitCoins; }
+
+.volverElemento {
+  display: none; }
+
+.imagenListada {
+  object-fit: cover; }
 
 .h2Java {
   font-size: 1.5rem; }
@@ -173,11 +261,11 @@ img {
   -o-transform: scale(1.25);
   transform: scale(1.25); }
 
-.Banderas__Colombia {
+.policial {
   height: 100%;
   width: 100%; }
 
-.Banderas__Colombia:hover {
+.policial:hover {
   -webkit-transform: scale(1.25);
   -moz-transform: scale(1.25);
   -ms-transform: scale(1.25);
@@ -223,8 +311,10 @@ img {
 
 .section3 {
   display: grid;
-  grid-template-columns: 6fr 6fr;
-  background-color: #CCC4B7; }
+  grid-template-columns: 6fr 6fr; }
+
+.nocturno3 {
+  background-color: #545559; }
 
 .section3__caliban {
   text-align-last: center; }
@@ -247,6 +337,9 @@ footer {
   grid-area: footer;
   background-color: #8B8073; }
 
+.nocturno4 {
+  background-color: #404040; }
+
 a {
   text-decoration: none;
   color: #CCC4B7; }
@@ -258,6 +351,56 @@ a {
 .Redes_Footer {
   align-items: center;
   justify-content: center; }
+
+.java {
+  background-color: #636363;
+  display: flex; }
+
+.slideThree {
+  margin-top: 7rem;
+  margin-left: 5rem;
+  width: 80px;
+  height: 26px;
+  background: #333;
+  margin: 20px auto;
+  position: relative;
+  border-radius: 50px;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.2); }
+  .slideThree:after {
+    content: 'OFF';
+    color: #000;
+    position: absolute;
+    right: 10px;
+    z-index: 0;
+    font: 12px/26px Arial, sans-serif;
+    font-weight: bold;
+    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.15); }
+  .slideThree:before {
+    content: 'ON';
+    color: #27ae60;
+    position: absolute;
+    left: 10px;
+    z-index: 0;
+    font: 12px/26px Arial, sans-serif;
+    font-weight: bold; }
+  .slideThree label {
+    display: block;
+    width: 34px;
+    height: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    z-index: 1;
+    background: #fcfff4;
+    background: linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+    border-radius: 50px;
+    transition: all 0.4s ease;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3); }
+  .slideThree input[type=checkbox] {
+    visibility: hidden; }
+    .slideThree input[type=checkbox]:checked + label {
+      left: 43px; }
 
 @media only screen and (min-width: 812px) and (max-width: 1290px) {
   .carrito {
@@ -276,6 +419,9 @@ a {
     grid-template-columns: 2fr 7fr 2fr;
     background-color: #E7E2D7;
     height: 9rem; }
+  .imagenMain {
+    height: 320px;
+    width: 320px; }
   .botones {
     grid-area: usuario; }
   .logo {
@@ -341,24 +487,38 @@ a {
     display: none; }
   .section1 {
     height: 20rem; }
-  .listaDeseos {
-    text-align: -webkit-center;
-    width: 30rem;
-    margin-left: 5rem; }
   .divCarrito {
     top: 34rem; } }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 370px) {
   .header {
-    grid-template-areas: 'menu buscador botones';
+    grid-template-areas: 'menu buscador';
     height: 6.2rem; }
   .Banderas {
-    grid-template-columns: 20% 20% 20% 20% 20%;
-    height: 9rem; }
+    grid-template-columns: 20% 20% 20% 20% 20%; }
+  .caliban {
+    height: 20rem;
+    width: 15rem;
+    padding-bottom: 5rem; }
   .botones {
     height: 7rem; }
   .section1__imagen {
     display: none; }
+  .luces {
+    width: 8rem;
+    height: 5rem; }
+  .botones {
+    display: none; }
+  .imagenMain {
+    height: 16rem;
+    width: 16rem;
+    margin-left: 1rem; }
+  .textoMain {
+    display: none; }
+  .slideThree {
+    top: 14rem;
+    right: 7.8rem;
+    position: absolute; }
   .section3 {
     display: contents; }
   .menu {
@@ -397,6 +557,164 @@ a {
   #menu-celular {
     display: block;
     width: 2rem; }
+  .section3__p {
+    font-size: 1rem; }
+  .logo {
+    display: none; }
+  footer {
+    width: 20rem; }
+  .logo-footer {
+    display: flex;
+    height: 5rem;
+    width: 5rem;
+    margin-top: 2rem; } }
+
+@media only screen and (min-width: 375px) and (max-width: 420px) {
+  .imagenMain {
+    height: 16rem;
+    width: 16rem;
+    margin-left: 3rem; }
+  .header {
+    grid-template-areas: 'menu buscador';
+    height: 6.2rem; }
+  .Banderas {
+    grid-template-columns: 20% 20% 20% 20% 20%; }
+  .caliban {
+    height: 20rem;
+    width: 15rem;
+    padding-bottom: 5rem; }
+  .botones {
+    height: 7rem; }
+  .section1__imagen {
+    display: none; }
+  .luces {
+    width: 8rem;
+    height: 5rem; }
+  .botones {
+    display: none; }
+  .textoMain {
+    display: none; }
+  .slideThree {
+    top: 14rem;
+    right: 9.2rem;
+    position: absolute; }
+  .section3 {
+    display: contents; }
+  .menu {
+    margin-top: 2rem; }
+  .imagenUsuario {
+    height: 3rem;
+    width: 3rem; }
+  .buscador__boton {
+    display: none; }
+  header {
+    height: 6.2rem; }
+  .menu-barra {
+    display: none; }
+    .menu-barra li {
+      border-color: black;
+      border-style: groove;
+      display: block;
+      color: white;
+      background-color: #8B8073;
+      width: 10rem;
+      margin: 0;
+      padding: 10px;
+      position: relative;
+      z-index: 3; }
+      .menu-barra li a {
+        text-decoration: none;
+        color: white; }
+    .menu-barra li:hover {
+      background-color: grey; }
+  #menu-barra-input:checked ~ ul {
+    display: block; }
+  #menu-hamburguesa {
+    grid-area: menu; }
+  #menu-barra-input {
+    display: none; }
+  #menu-celular {
+    display: block;
+    width: 2rem; }
+  .section3__p {
+    font-size: 1rem; }
+  .logo {
+    display: none; }
+  .logo-footer {
+    display: flex;
+    height: 5rem;
+    width: 5rem;
+    margin-top: 2rem; } }
+
+@media only screen and (min-width: 420px) and (max-width: 500px) {
+  .imagenMain {
+    height: 16rem;
+    width: 16rem;
+    margin-left: 4rem; }
+  .header {
+    grid-template-areas: 'menu buscador';
+    height: 6.2rem; }
+  .Banderas {
+    grid-template-columns: 20% 20% 20% 20% 20%; }
+  .caliban {
+    height: 20rem;
+    width: 15rem;
+    padding-bottom: 5rem; }
+  .botones {
+    height: 7rem; }
+  .section1__imagen {
+    display: none; }
+  .luces {
+    width: 8rem;
+    height: 5rem; }
+  .botones {
+    display: none; }
+  .textoMain {
+    display: none; }
+  .slideThree {
+    top: 14rem;
+    right: 11rem;
+    position: absolute; }
+  .section3 {
+    display: contents; }
+  .menu {
+    margin-top: 2rem; }
+  .imagenUsuario {
+    height: 3rem;
+    width: 3rem; }
+  .buscador__boton {
+    display: none; }
+  header {
+    height: 6.2rem; }
+  .menu-barra {
+    display: none; }
+    .menu-barra li {
+      border-color: black;
+      border-style: groove;
+      display: block;
+      color: white;
+      background-color: #8B8073;
+      width: 10rem;
+      margin: 0;
+      padding: 10px;
+      position: relative;
+      z-index: 3; }
+      .menu-barra li a {
+        text-decoration: none;
+        color: white; }
+    .menu-barra li:hover {
+      background-color: grey; }
+  #menu-barra-input:checked ~ ul {
+    display: block; }
+  #menu-hamburguesa {
+    grid-area: menu; }
+  #menu-barra-input {
+    display: none; }
+  #menu-celular {
+    display: block;
+    width: 2rem; }
+  .section3__p {
+    font-size: 1rem; }
   .logo {
     display: none; }
   .logo-footer {
