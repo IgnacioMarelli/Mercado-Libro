@@ -596,10 +596,25 @@ a {
     display: none; }
   .slideThree {
     top: 14rem;
-    right: 9.2rem;
+    right: 10rem;
     position: absolute; }
   .section3 {
     display: contents; }
+  .divJava {
+    height: 10rem;
+    width: 21rem; }
+  .productosCarrito {
+    height: 20rem;
+    width: 22rem; }
+  .imagenLibroSeleccionado {
+    height: 8rem;
+    width: 5rem; }
+  .cantidadLibros {
+    width: 3rem; }
+  .imagenEntrega {
+    width: 100%; }
+  #carrito {
+    background-color: #B5AB9F; }
   .menu {
     margin-top: 2rem; }
   .imagenUsuario {

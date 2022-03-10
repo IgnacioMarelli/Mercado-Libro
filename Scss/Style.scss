@@ -681,13 +681,31 @@ input[type=checkbox] {
     }
     .slideThree{
         top: 14rem;
-        right: 9.2rem;
+        right: 10rem;
         position: absolute;
     }
     .section3{
         display: contents;
     }
+    .divJava {
+        @include tamanio(10rem, 21rem);
 
+    }
+    .productosCarrito {
+        @include tamanio(20rem, 22rem);
+    }
+    .imagenLibroSeleccionado {
+        @include tamanio(8rem, 5rem);
+    }
+    .cantidadLibros{
+        width: 3rem;
+    }
+    .imagenEntrega{
+        width: 100%;
+    }
+    #carrito{
+        background-color: #B5AB9F;
+    }
     .menu{
         margin-top: 2rem;
     }
